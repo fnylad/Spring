@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div>
     <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect" background-color="#ffffff" text-color="#000000" active-text-color="#ffd04b" style="border: 0">
       <el-menu-item disabled>
