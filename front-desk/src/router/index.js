@@ -1,24 +1,27 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+// 登录注册模块
+const Premise = () => import("../views/premise/main")
+const ApplyLogin = () => import("../views/premise/login/apply_login")
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '',
+    redirect: '/premise/apply_login'
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/premise',
+    component: Premise,
+    children: [
+      {
+        path: 'apply_login',
+        component: ApplyLogin
+      },
+    ]
   }
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 
