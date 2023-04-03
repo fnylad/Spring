@@ -2,7 +2,6 @@ package com.master.Candidate.Controller;
 
 
 import com.fasterxml.jackson.core.JacksonException;
-import com.master.Candidate.Mapper.UserMapper;
 import com.master.Candidate.Service.LoginService;
 import com.master.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,20 +15,7 @@ public class LoginController {
 
     @Autowired
     private  LoginService loginService;
-    @Autowired
-    private UserMapper userMapper;
-    @RequestMapping("/hello")
-    public String hello(){
-        return "hekki";
-    }
 
-
-    @GetMapping("/login/{phone}")
-    public List<User> login(@PathVariable("phone") String phone){
-        List<User> users =userMapper.queryUserByPhone(phone);
-
-        return users;
-    }
 
     @RequestMapping("/premise/candidate_login")
     @ResponseBody

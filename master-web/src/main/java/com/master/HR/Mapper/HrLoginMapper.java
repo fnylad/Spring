@@ -1,18 +1,14 @@
-package com.master.Candidate.Mapper;
-
+package com.master.HR.Mapper;
 
 import com.master.Entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
 @Mapper
-public interface UserMapper {
+public interface HrLoginMapper {
 
     @Select("select * from user where phone=#{phone}")
-    List<User> queryUserByPhone(String phone);
+    User HrLogin(String phone);
 }
- 

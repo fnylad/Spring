@@ -10,7 +10,7 @@
         <div class="right-content">
           <div class="title">
             <span class="left-title">Log in</span>
-            <span class="right-title orange">'PINK'</span>
+            <span class="right-title orange">'Master'</span>
           </div>
           <div class="form">
             <el-form ref="form" :model="form" label-width="80px">
@@ -59,9 +59,8 @@ export default {
       if (this.phone === "" || this.password === "") {
         alert("账号或密码不能为空");
       } else {
-        const _this = this;
         this.$http
-          .post("http://localhost:8085/premise/hr_login", {
+          .post("http://localhost:9090/premise/hr_login", {
             data: {
               phone: this.form.phone,
               password: this.form.password,

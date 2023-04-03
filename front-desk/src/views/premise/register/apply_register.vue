@@ -11,7 +11,7 @@
           <div class="form1" v-if="pageActive === 1">
             <div class="title">
               <span class="left-title">Sign up</span>
-              <span class="right-title green">'PINK'</span>
+              <span class="right-title green">'Master'</span>
             </div>
             <div class="form">
               <el-form ref="form" :model="signup" label-width="80px">
@@ -248,14 +248,14 @@ export default {
   },
   methods: {
     formSubmit_1() {
-      const _this = this
-      this.$http.post('http://localhost:8085/premise/candidate_register/step_1', {
+
+      this.$http.post('http://localhost:9090/premise/candidate_register/step_1', {
         data:{
         phone: this.signup.phone,
         password: this.signup.password
         }
       })
-      .then(function (response) {
+      .then(function () {
       })
       .catch(function (error) {
         console.log(error);
@@ -268,7 +268,7 @@ export default {
     },
     formSubmit_2() {
         const v = this
-        this.$http.post('http://localhost:8085/premise/candidate_register/step_2', {
+        this.$http.post('http://localhost:9090/premise/candidate_register/step_2', {
         data:{
         phone: this.signup.phone,
         name: this.base.name,
@@ -276,7 +276,7 @@ export default {
         birthday :this.base.birthday
         }
       })
-      .then(function (response) {
+      .then(function () {
       v.$router.push({
         path: '/premise/apply_login'
       })
