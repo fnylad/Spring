@@ -5,6 +5,9 @@ const ApplyLogin = () => import("../views/premise/login/apply_login")
 const HireLogin =() => import("../views/premise/login/hire_login")
 const ApplyRegister = () =>import('../views/premise/register/apply_register')
 const HireRegister =() =>import('../views/premise/register/hire_register')
+
+// 应聘系统主体模块
+const ApplySystem = () => import("../views/apply-system/main")
 const routes = [
   {
     path: '',
@@ -31,7 +34,12 @@ const routes = [
         component: HireRegister
       },
     ]
+  },
+  {
+    path: '/index',
+    component: ApplySystem
   }
+
 ]
 
 const router = createRouter({

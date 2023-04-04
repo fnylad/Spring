@@ -18,7 +18,7 @@
       </nav-menu>
     </header>
     <section class="main">
-      <!-- <nav-bar style="z-index: 1"></nav-bar> -->
+       <nav-bar style="z-index: 1"></nav-bar>
       <section class="route">
         <section style="z-index: 0">
           <router-view></router-view>

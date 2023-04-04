@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/PINK-System-Sprinboot-Vue.js-master.iml" filepath="$PROJECT_DIR$/.idea/PINK-System-Sprinboot-Vue.js-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinkweb/pinkwebPosition/pinkweb.iml" filepath="$PROJECT_DIR$/pinkweb/pinkwebPosition/pinkweb.iml" />
+    </modules>
+  </component>
+</project>
